@@ -292,7 +292,8 @@ function updateTable {
     for i in "${!colArray[@]}"; do
         colField=$(echo "${colArray[$i]}" | cut -d':' -f1)
         if [[ "$colField" == "$colName" ]]; then
-            colIndex=$((i+1))          fi
+            colIndex=$((i+1))          
+        fi
         if [[ "$colField" == "$updateCol" ]]; then
             updateIndex=$((i+1))
         fi
